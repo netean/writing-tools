@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing Tools</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#f3f2f2;--surface:#eae9e9;--text:#201e1d;--muted:#5c5857;--accent:#ec3013;--accent-700:#ae1800;--rule:rgba(32,30,29,.4)}
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--text);font-family:"Archivo",system-ui,sans-serif}
+  a{color:var(--accent-700)}a:hover{color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+  header{border-bottom:2px solid var(--text)}
+  header .wrap{padding-top:56px;padding-bottom:28px}
+  h1{font-size:clamp(40px,7vw,72px);font-weight:800;letter-spacing:-.02em;line-height:1;margin:0}
+  .lede{margin:14px 0 0;font-size:18px;color:var(--muted);max-width:56ch;text-wrap:pretty}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));border-left:2px solid var(--rule)}
+  .tool{display:flex;flex-direction:column;gap:10px;padding:24px;min-height:200px;border-right:2px solid var(--rule);border-bottom:2px solid var(--rule);color:var(--text);text-decoration:none;background:var(--bg)}
+  .tool:hover{background:var(--surface);color:var(--text)}
+  .tool:hover .go{color:var(--accent)}
+  .kicker{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .name{font-size:24px;font-weight:800;line-height:1.15}
+  .desc{font-size:15px;line-height:1.5;color:var(--muted);flex:1;text-wrap:pretty}
+  .go{font-size:14px;font-weight:700;color:var(--accent-700)}
+  .soon{color:var(--muted);pointer-events:none}
+  main{padding:32px 0 64px}
+  footer{border-top:2px solid var(--text);padding:16px 0 40px;font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Writing Tools</h1>
+    <p class="lede">Small, offline tools for planning stories. Each runs in your browser and saves to your own machine.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="grid">
+
+      <!-- ===== TOOL CARD — copy this block to add a new tool ===== -->
+      <a class="tool" href="Story%20Character%20Mapper.html">
+        <span class="kicker">Planning</span>
+        <span class="name">Story Character Mapper</span>
+        <span class="desc">Place characters on timelines by chapter, event or date. Group them, link relationships, add notes, and export to JSON, SVG, Mermaid or text.</span>
+        <span class="go">Open →</span>
+      </a>
+      <!-- ===== END TOOL CARD ===== -->
+
+      <!--
+        To add a tool:
+        1. Put the tool's .html file in this docs/ folder.
+        2. Copy the TOOL CARD block above and paste it here.
+        3. Change href to the file name (use %20 for spaces, or avoid spaces).
+        4. Update kicker, name and description.
+      -->
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">Work is stored in each browser. Use Save / Import JSON to move it between machines.</div>
+</footer>
+</body>
+</html>
